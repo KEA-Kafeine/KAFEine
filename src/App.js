@@ -13,6 +13,7 @@ import Contents from "./pages/Contents";
 import "./pages/test.css";
 
 function App() {
+  //깃허브 테스트
   const [sidebar, setSidebar] = useState(true);
   const showSidebar = () => setSidebar(!sidebar);
 
