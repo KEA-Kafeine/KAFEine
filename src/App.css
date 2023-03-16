@@ -10,6 +10,16 @@
   --primary-color: #2d7dff;
 }
 
+.main-content {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+
 .app-page {
   background: #304352; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #d7d2cc, #304352); /* Chrome 10-25, Safari 5.1-6 */
@@ -143,6 +153,7 @@ h1 {
   line-height: 111%;
   color: #847d93;
   margin-top: 1.1em;
+  margin-block: 0;
 }
 
 .cta {
@@ -188,7 +199,7 @@ h1 {
     }
 
     .content p {
-      width: 70%;
+      width: 80%;
     }
   }
 

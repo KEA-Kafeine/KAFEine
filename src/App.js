@@ -10,8 +10,6 @@ import Members from "./pages/Members";
 import NoPage from "./pages/NoPage";
 import Contents from "./pages/Contents";
 
-import "./pages/test.css";
-
 function App() {
   //깃허브 테스트
   //깃허브 테스트2
@@ -22,7 +20,7 @@ function App() {
   const visionRef = useRef(null);
   const contentsRef = useRef(null);
   const membersRef = useRef(null);
-  const noPageRef = useRef(null);
+  // const noPageRef = useRef(null);
 
   const gotoHome = () => {
     homeRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -36,9 +34,6 @@ function App() {
   const gotoMembers = () => {
     membersRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-  const gotoNoPage = () => {
-    noPageRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <div className="app-page">
@@ -51,7 +46,7 @@ function App() {
             gotoVision={gotoVision}
             gotoContents={gotoContents}
             gotoMembers={gotoMembers}
-            gotoNoPage={gotoNoPage}
+            // gotoNoPage={gotoNoPage}
           />
           <Menu onClick={showSidebar} className="menu-btn" />
           <div className="main-content">
@@ -59,7 +54,14 @@ function App() {
             <Vision ref={visionRef} />
             <Contents ref={contentsRef} />
             <Members ref={membersRef} />
-            <NoPage ref={noPageRef} />
+            <Routes>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/vision" element={<Vision/>}/>
+              <Route path="/members" ref={membersRef} />
+              <Route path="/contents" element={<Contents/>}/>
+              <Route path="*" element={<NoPage/>}/>
+            </Routes>
+            {/* <NoPage ref={noPageRef} /> */}
           </div>
         </BrowserRouter>
       </div>
