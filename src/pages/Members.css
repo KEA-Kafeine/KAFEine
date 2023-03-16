@@ -1,0 +1,84 @@
+.ProfileCard {
+  background: rgb(12, 12, 205);
+  background: linear-gradient(90deg, rgba(12, 12, 205, 1) 0%, rgba(29, 22, 131, 1) 0%, rgba(69, 69, 167, 1) 39%, rgba(73, 162, 180, 1) 100%);
+  border-radius: 3em;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  transition: 0.3s;
+  width: 100%;
+  height: 30em;
+}
+.MemberName h2 {
+  color: cornsilk;
+}
+
+.MemberName h2 {
+  color: cornsilk;
+  text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.MemberName p {
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-weight: bold;
+}
+
+.IconImage {
+  background: coral;
+  border-radius: 3em;
+  width: 10em;
+  height: 10em;
+  display: flex;
+  margin-top: 3em;
+  justify-content: center;
+  position: relative;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  transition: 0.3s;
+}
+
+@media only screen and (min-width: 1000px) {
+  .ProfileCard {
+    height: 15em;
+    margin-bottom: 2em;
+    background: rgb(12, 12, 205);
+    background: linear-gradient(90deg, rgba(12, 12, 205, 1) 0%, rgba(29, 22, 131, 1) 0%, rgba(69, 69, 167, 1) 39%, rgba(73, 162, 180, 1) 100%);
+    border-radius: 3em;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    transition: 0.3s;
+  }
+
+  .MemberName {
+    width: 50%;
+    margin-left: 5em;
+    margin-top: 1em;
+    align-items: center;
+    float: left;
+  }
+  .MemberName h2 {
+    color: cornsilk;
+  }
+
+  .MemberName p {
+    text-align: center;
+    font-size: 1em;
+    padding-left: 3em;
+    color: white;
+  }
+
+  .IconImage {
+    float: left;
+    background: coral;
+    border-radius: 3em;
+    width: 10em;
+    height: 10em;
+    margin-top: 2em;
+    margin-left: 2em;
+    position: relative;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    transition: 0.3s;
+  }
+}
