@@ -1,8 +1,0 @@
-.main-content {
-  height: 100%;
-  overflow: scroll;
-  display: flex;
-  flex-direction: column;
-  border-top-right-radius: 13px;
-  border-bottom-right-radius: 13px;
-}
