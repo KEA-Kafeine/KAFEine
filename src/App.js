@@ -11,7 +11,8 @@ import NoPage from "./pages/NoPage";
 import Contents from "./pages/Contents";
 
 function App() {
-  const [sidebar, setSidebar] = useState(true);
+  // 사이드바 default값 변경
+  const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
 
   const homeRef = useRef(null);

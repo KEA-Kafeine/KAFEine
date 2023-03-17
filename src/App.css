@@ -18,6 +18,14 @@
   flex-direction: column;
   border-top-right-radius: 13px;
   border-bottom-right-radius: 13px;
+
+  /* 세로 스크롤바 관련 - 1 */
+  -ms-overflow-style: none; /* IE, Edge No scroll bar */
+  scrollbar-width: none; /* Firefox No scroll bar */
+}
+/* 세로 스크롤바 관련 - 2 */
+.main-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera No scroll bar */
 }
 
 .app-page {
