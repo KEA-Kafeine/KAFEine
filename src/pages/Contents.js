@@ -1,5 +1,5 @@
 import { forwardRef, useRef } from "react";
-
+import Form from "./FormPage/Form";
 const Contents = forwardRef((props, ref) => {
   return (
     <section ref={ref}>
@@ -9,10 +9,7 @@ const Contents = forwardRef((props, ref) => {
       <div className="cv">
         <div className="content">
           <h1>Contents </h1>
-          <p>추가 컨텐츠 페이지.</p>
-          <a href="https://github.com/KEA-Kaffeine" className="cta">
-            github
-          </a>
+          <Form />
         </div>
       </div>
       <script async src="index.js"></script>

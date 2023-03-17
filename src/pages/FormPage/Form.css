@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;800&display=swap");
+
+.formsection {
+  background: #e9eeef;
+  border-radius: 3em;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  transition: 0.3s;
+  width: 25em;
+  height: 30em;
+}
+.formsection header {
+  font-size: 30px;
+  font-weight: 600;
+}
+.formsection nav {
+  background: #d9d9d9;
+  border-radius: 0.3em;
+  margin-top: 3em;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.formsection nav label {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  color: #413e47;
+  font-size: 17px;
+  position: relative;
+  z-index: 1;
+}
+
+.formsection nav label i {
+  padding-right: 7px;
+}
+
+.formsection nav .slider {
+  position: absolute;
+  height: 100%;
+  width: 25%;
+  background: #8a8585;
+  border-radius: 5px;
+  z-index: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+#home:checked ~ nav label.home,
+#blog:checked ~ nav label.blog,
+#code:checked ~ nav label.code,
+#help:checked ~ nav label.help,
+#about:checked ~ nav label.about {
+  color: #fff;
+}
+
+#blog:checked ~ nav .slider {
+  left: 25%;
+}
+#code:checked ~ nav .slider {
+  left: 50%;
+}
+#about:checked ~ nav .slider {
+  left: 75%;
+}
+
+#home:checked ~ div .content-1 {
+  display: block;
+}
+
+.pages .content {
+  display: none;
+}
+.pages .content .title {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  .formsection {
+    height: 15em;
+    margin-bottom: 4em;
+    background: #e9eeef;
+    border-radius: 3em;
+    width: 58em;
+    height: 682px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+      rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    transition: 0.3s;
+  }
+}
