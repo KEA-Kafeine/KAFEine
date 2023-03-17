@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import { ReactComponent as Arrow } from "../contents/arrow-left.svg";
 
 import logo from "../contents/samplelogo.png";
-import Contents from "./Contents";
+// import Contents from "./Contents";
 
 const logoCss = {
   display: "flex",
@@ -42,15 +42,11 @@ function Nav(props) {
             </Link>
           </li>
           <li>
-            <Link to="*" onClick={props.gotoNoPage}>
-              404
-            </Link>
+            <a href="https://github.com/KEA-Kaffeine" className="cta">
+            github
+            </a>
           </li>
         </ul>
-
-        <a href="https://github.com/KEA-Kaffeine" className="cta">
-          github
-        </a>
       </nav>
     </div>
   );
