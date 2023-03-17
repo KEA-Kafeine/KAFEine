@@ -53,13 +53,6 @@ function App() {
             <Vision ref={visionRef} />
             <Contents ref={contentsRef} />
             <Members ref={membersRef} />
-            <Routes>
-              <Route path="/" element={<Home/>}/>
-              <Route path="/vision" element={<Vision/>}/>
-              <Route path="/members" ref={membersRef} />
-              <Route path="/contents" element={<Contents/>}/>
-              <Route path="*" element={<NoPage/>}/>
-            </Routes>
             {/* <NoPage ref={noPageRef} /> */}
           </div>
         </BrowserRouter>

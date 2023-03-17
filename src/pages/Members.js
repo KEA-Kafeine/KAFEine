@@ -61,22 +61,37 @@ const teamKaffeine = [
 ];
 
 function MembersCards(props) {
+  if (props.id % 2 === 0) {
+    return (
+      <div className="ProfileCard">
+        <div className="IconImage ">
+          <img src={props.profileImg} alt="" />
+        </div>
+        <div className="MemberName">
+          {props.isPm ? (
+            <h2>
+              {props.name} / {props.major} / PM
+            </h2>
+          ) : (
+            <h2>
+              {props.name} / {props.major}
+            </h2>
+          )}
+          <p>{props.info}</p>
+          <p>{props.email}</p>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="ProfileCard">
       <div className="IconImage ">
         <img src={props.profileImg} alt="" />
       </div>
       <div className="MemberName">
-        {props.isPm ? (
-          <h2>
-            {props.name} / {props.major} / PM
-          </h2>
-        ) : (
           <h2>
             {props.name} / {props.major}
           </h2>
-        )}
-
         <p>{props.info}</p>
         <p>{props.email}</p>
       </div>
