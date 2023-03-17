@@ -29,7 +29,7 @@ const teamKaffeine = [
     major: "AI",
     email: "gnnryu@gmail.com",
     info: "Every adventure requires a first step. -Alice In Wonderland-",
-    profileImgAd: "img/p3.png",
+    profileImgAd: "img/p3.svg",
   },
   {
     id: 3,
