@@ -101,7 +101,7 @@ function MembersCards(props) {
 
 const Members = forwardRef((props, ref) => {
   return (
-    <section ref={ref} className="members-section">
+    <section ref={ref}>
       <div className="cv">
         <div className="content">
           <h1>About Us </h1>
