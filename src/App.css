@@ -7,7 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;800&display=swap");
 
 :root {
-  --primary-color: #2d7dff;
+  --primary-color: #ffcd4a;
 }
 
 .main-content {
@@ -18,12 +18,20 @@
   flex-direction: column;
   border-top-right-radius: 13px;
   border-bottom-right-radius: 13px;
+
+  /* 세로 스크롤바 관련 - 1 */
+  -ms-overflow-style: none; /* IE, Edge No scroll bar */
+  scrollbar-width: none; /* Firefox No scroll bar */
+}
+/* 세로 스크롤바 관련 - 2 */
+.main-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera No scroll bar */
 }
 
 .app-page {
-  background: #304352; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #d7d2cc, #304352); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #000000, #000000); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #000000, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   height: 100vh;
   background-attachment: fixed;
@@ -42,6 +50,7 @@
 }
 
 .lion {
+  /*사용 안함*/
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -54,11 +63,15 @@
 }
 
 section {
-  background: #221f26;
-  background-size: cover;
+  background: #f0f0f0;
+  width: 50em;
+  height: cover;
+  padding-bottom: 4em;
+
+  /* background-size: cover;
   background-blend-mode: screen;
   background-position: -100px;
-  padding: 2em;
+  padding: 2em; */
 }
 
 .members-section {
@@ -74,6 +87,159 @@ section {
   margin-left: 2em;
 }
 
+/*h1 태그, content p 태그 삭제함 */
+/* 이도경 수정 부분 */
+/*Home 이미지, p 테그 수정 부분 */
+
+.coffee-container {
+  margin-left: 2em;
+  margin-top: 3em;
+  width: 20em;
+}
+
+.coffee {
+  opacity: 0.7;
+}
+
+.content .bottom-line {
+  margin-top: -1em;
+  margin-left: 4em;
+}
+
+/* 이도경 수정 부분 */
+/*비전 이미지, p 테그 수정 부분 */
+
+.cup {
+  opacity: 0.7;
+  margin-left: -4em;
+  width: 37em;
+}
+
+.wakeup {
+  margin-left: 4.5em;
+  font-size: 3.4em;
+}
+
+.wakeup-kor {
+  margin-top: -4em;
+  margin-left: 9em;
+}
+
+.wakeup-des {
+  margin-left: 13em;
+  font-size: 0.8em;
+}
+
+.cup2 {
+  margin-left: 13em;
+  margin-top: 4em;
+  width: 30em;
+  opacity: 0.7;
+}
+
+.text-anywhere {
+  font-size: 3em;
+}
+
+.vision-logo {
+  width: 20em;
+  margin-left: 12em;
+  margin-top: 6em;
+}
+
+.text-anywhere {
+  margin-left: 3.5em;
+  font-size: 3.4em;
+  margin-top: 2em;
+}
+
+.text-anywhere-des {
+  margin-top: -2em;
+  margin-left: 15em;
+  font-size: 0.8em;
+}
+
+/*핸드폰 화면용으로 설정 - 이도경 */
+@media screen and (max-width: 420px) {
+  .wakeup {
+    margin-left: 4em;
+    font-size: 2.7em;
+  }
+  .coffee-container {
+    margin-left: 3em;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    width: 15em;
+  }
+  .wakeup-kor {
+    margin-top: -3.7em;
+    margin-left: 6.5em;
+    font-size: 1em;
+  }
+
+  .wakeup-des {
+    margin-left: 9.2em;
+    margin-top: -1.2em;
+    font-size: 0.7em;
+    font-weight: 300;
+  }
+
+  .cup {
+    opacity: 0.7;
+    margin-left: -6em;
+    width: 30em;
+  }
+
+  .cup2 {
+    margin-left: 8em;
+    margin-top: 4em;
+    width: 23em;
+    opacity: 0.7;
+  }
+
+  .vision-logo {
+    width: 20em;
+    margin-left: 6em;
+    margin-top: 6em;
+  }
+
+  .text-anywhere {
+    margin-left: 2em;
+    font-size: 3em;
+    margin-top: 2em;
+  }
+
+  .text-anywhere-des {
+    margin-top: -2em;
+    margin-left: 9em;
+    font-weight: 300;
+    font-size: 0.7em;
+  }
+
+  .maintext {
+    font-size: 2em;
+    margin-left: 0.7em;
+  }
+  .text-need {
+    margin-left: 1.5em;
+  }
+}
+
+/*----- 아래부터는 수정한 부분 아님 - 이도경 - */
+.members-section {
+  background: #221f26;
+  width: 100%;
+}
+
+.menu-btn {
+  color: aliceblue;
+  cursor: pointer;
+  position: absolute;
+  margin-top: 2em;
+  margin-left: 2em;
+}
+
+/*네비 바 리스트들*/
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -82,38 +248,52 @@ nav ul {
 
 nav ul li {
   width: 100%;
+  padding: 0.2em;
 }
 nav ul li a {
   text-decoration: none;
-  color: white;
-  display: block;
-  padding: 0.875em 5em 0.875em 4em;
+  color: #1a2051;
+  font-weight: bold;
+  font-size: x-large;
+  display: inline-block;
+  margin: 0em 0em 0.3em 3em;
 }
 
+/*네비 바 항목 가리켰을 떄*/
 nav ul li a:hover {
-  background: #413e47;
+  font-size: xx-large;
+  color: #ffcd4a;
+  margin: -0.14em 0em 0em 2em;
 }
 
+/*네비 바 가리기 버튼*/
 .back-btn {
-  color: white;
-  margin: 2em;
+  color: #1a2051;
+  margin-left: 2em;
+  margin-top: 2em;
   cursor: pointer;
   transition: transform 0.3s;
 }
 
 .nav-menu.active {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  /* border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px; */
+  /* height: 90%; */
   left: 0;
   transition: 0.3ms;
 }
 
 .nav-menu {
   position: fixed;
-  z-index: 1;
-  background: #2c2931;
+  z-index: 10;
+  background: #ffffff;
   left: 0;
-  top: 0;
-  height: 100vh;
-  max-width: 300px;
+  top: 10;
+  height: 96.05vh;
+  min-width: 260px;
+  max-width: 290px;
   left: -100%;
   transition: 0.3s;
 }
@@ -125,20 +305,25 @@ nav ul li a:hover {
   font-size: 1.5rem;
   letter-spacing: -0.1em;
   text-align: center;
-  width: 100%;
-  margin: 0;
+  width: 60%;
+  margin: 1em;
 }
 
-header {
+/* header {
   display: flex;
-}
+} */
 
 h1 {
   font-size: clamp(2.5rem, -0.875rem + 8.333vw, 4rem);
   font-weight: 800;
   text-transform: uppercase;
-  color: white;
+  color: black;
   line-height: 89%;
+}
+
+.text_quitus {
+  margin-top: -1em;
+  margin-left: 15em;
 }
 
 .cv {
@@ -147,14 +332,14 @@ h1 {
   height: 80%;
 }
 
-.content p {
+/* .content p {
   font-size: clamp(2rem, -0.875rem + 8.333vw, 3rem);
   font-weight: 300;
   line-height: 111%;
   color: #847d93;
   margin-top: 1.1em;
   margin-block: 0;
-}
+} 검토 필요 */
 
 .cta {
   color: white;
@@ -183,6 +368,104 @@ h1 {
   background: var(--primary-color);
 }
 
+/*혜균: 네비게이션 하단 깃허브 로고*/
+.giturl {
+  width: 60%;
+  margin-top: 10em;
+  margin-left: 2em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+  /* display: inline-block; */
+  /* border: 1px solid #4d4d4d; */
+  padding: 0em 1.5em 0em 0em;
+  position: relative;
+}
+
+.giturl:before {
+  width: 60%;
+  color: white;
+  content: "";
+  position: absolute;
+  background: url("./contents/icon_github.svg") no-repeat;
+  width: 2em;
+  height: 2em;
+  /* left: 2em;
+  top: 2em; */
+}
+
+.giturl:hover {
+  width: 60%;
+  background: url("./contents/icon_github_hover.svg") no-repeat;
+  /* width: 2em;
+  height: 2em;
+  left: 2em;
+  top: 2em; */
+}
+
+/*혜균: 네비게이션 하단 노션 로고*/
+.notionurl {
+  width: 100;
+  margin-top: calc(200 / 400 * 100%);
+  margin-left: 2em;
+  margin-right: 1em;
+  margin-bottom: calc(200 / 400 * 100%);
+  /* display: inline-block; */
+  /* border: 1px solid #4d4d4d; */
+  padding: 0em 1.5em 0em 0em;
+  position: relative;
+}
+
+.notionurl:before {
+  /* width: 100; */
+  color: white;
+  content: "";
+  position: absolute;
+  background: url("./contents/icon_notion.svg") no-repeat;
+  width: 2em;
+  height: 2em;
+  /* left: 2em;
+  top: 2em; */
+}
+
+.notionurl:hover {
+  background: url("./contents/icon_notion_hover.svg") no-repeat;
+  /* width: 2em;
+  height: 2em;
+  left: 2em;
+  top: 2em; */
+}
+
+/*혜균: 네비게이션 하단 피그마 로고*/
+.figmaurl {
+  margin-top: 10em;
+  margin-left: 2em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+  /* display: inline-block; */
+  /* border: 1px solid #4d4d4d; */
+  padding: 0em 1.5em 0em 0em;
+  position: relative;
+}
+
+.figmaurl:before {
+  color: white;
+  content: "";
+  position: absolute;
+  background: url("./contents/icon_figma.svg") no-repeat;
+  width: 2em;
+  height: 2em;
+  /* left: 2em;
+  top: 2em; */
+}
+
+.figmaurl:hover {
+  background: url("./contents/icon_figma_hover.svg") no-repeat;
+  /* width: 2em;
+  height: 2em;
+  left: 2em;
+  top: 2em; */
+}
+
 @media only screen and (min-width: 1000px) {
   .nav-menu {
     position: unset;
@@ -193,13 +476,91 @@ h1 {
     height: 100%;
   }
 
+  .coffee-container {
+    width: 30em;
+    margin-left: 25em;
+  }
+
   @media only screen and (min-width: 700px) {
+    .text-need {
+      font-size: 2em;
+      margin-top: -0.3em;
+      margin-left: 0.3em;
+    }
     .left-col {
       display: flex;
     }
 
     .content p {
       width: 80%;
+    }
+
+    /*홈페이지 수정 - 이도경 */
+    .coffee-container {
+      width: 26em;
+      margin-left: 26em;
+      margin-top: -8em;
+    }
+    .coffee {
+      opacity: 0.7;
+    }
+
+    .cup {
+      width: 50em;
+      margin-left: -10em;
+      opacity: 0.7;
+    }
+    .content .bottom-line {
+      margin-top: 1em;
+      margin-left: 5em;
+      margin-bottom: 3em;
+    }
+
+    /*비전 페이지 수정 - 이도경 */
+    .wakeup {
+      margin-left: 6em;
+      font-size: 5em;
+    }
+
+    .wakeup-kor {
+      margin-left: 21em;
+      margin-top: -5em;
+    }
+
+    .wakeup-des {
+      font-size: 1.03em;
+      font-weight: 400;
+
+      margin-left: 24em;
+    }
+
+    .cup2 {
+      margin-left: 16em;
+      margin-top: 4em;
+      width: 40em;
+      opacity: 0.7;
+    }
+
+    .text-anywhere {
+      font-size: 3em;
+    }
+
+    .vision-logo {
+      width: 34em;
+      margin-left: -2em;
+      margin-top: 3em;
+    }
+
+    .text-anywhere {
+      margin-top: 2em;
+      margin-left: 0em;
+      font-size: 4em;
+    }
+
+    .text-anywhere-des {
+      margin-left: 0em;
+      margin-top: -2em;
+      font-size: 1.1em;
     }
   }
 
@@ -237,5 +598,19 @@ h1 {
   .content {
     justify-self: left;
     margin-left: 4em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-content {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
   }
 }

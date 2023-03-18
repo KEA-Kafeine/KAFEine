@@ -29,7 +29,7 @@ const teamKaffeine = [
     major: "AI",
     email: "gnnryu@gmail.com",
     info: "Every adventure requires a first step. -Alice In Wonderland-",
-    profileImgAd: "img/p3.png",
+    profileImgAd: "img/p3.svg",
   },
   {
     id: 3,
@@ -61,22 +61,37 @@ const teamKaffeine = [
 ];
 
 function MembersCards(props) {
+  if (props.id % 2 === 0) {
+    return (
+      <div className="ProfileCard">
+        <div className="IconImage ">
+          <img src={props.profileImg} alt="" />
+        </div>
+        <div className="MemberName">
+          {props.isPm ? (
+            <h2>
+              {props.name} / {props.major} / PM
+            </h2>
+          ) : (
+            <h2>
+              {props.name} / {props.major}
+            </h2>
+          )}
+          <p>{props.info}</p>
+          <p>{props.email}</p>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="ProfileCard">
       <div className="IconImage ">
         <img src={props.profileImg} alt="" />
       </div>
       <div className="MemberName">
-        {props.isPm ? (
-          <h2>
-            {props.name} / {props.major} / PM
-          </h2>
-        ) : (
           <h2>
             {props.name} / {props.major}
           </h2>
-        )}
-
         <p>{props.info}</p>
         <p>{props.email}</p>
       </div>
@@ -86,7 +101,7 @@ function MembersCards(props) {
 
 const Members = forwardRef((props, ref) => {
   return (
-    <section ref={ref} className="members-section">
+    <section ref={ref}>
       <div className="cv">
         <div className="content">
           <h1>About Us </h1>

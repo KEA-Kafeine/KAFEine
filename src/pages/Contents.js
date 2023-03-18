@@ -1,13 +1,12 @@
 import { forwardRef, useRef } from "react";
-
+import Form from "./FormPage/Form";
 const Contents = forwardRef((props, ref) => {
   return (
     <section ref={ref}>
       <div className="cv">
         <div className="content">
-          <h1>Contents</h1>
-          <p>추가 컨텐츠 페이지.</p>
-          <img src="https://ghchart.rshah.org/11chyeonjin" />
+          <h1>Contents </h1>
+          <Form />
         </div>
       </div>
       <script async src="index.js"></script>
