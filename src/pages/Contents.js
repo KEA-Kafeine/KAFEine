@@ -9,7 +9,6 @@ const Contents = forwardRef((props, ref) => {
       <div className="cv">
         <div className="content">
           <h1>Contents </h1>
-          <Form />
         </div>
       </div>
       <script async src="index.js"></script>

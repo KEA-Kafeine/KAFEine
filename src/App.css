@@ -11,17 +11,7 @@
 }
 
 .app-page {
-  background: #304352; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #d7d2cc,
-    #304352
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #d7d2cc,
-    #304352
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: black;
 
   height: 100vh;
   background-attachment: fixed;
@@ -55,6 +45,7 @@ section {
   background: #f0f0f0;
   width: 50em;
   height: cover;
+  padding-bottom: 4em;
 }
 /*h1 태그, content p 태그 삭제함 */
 /* 이도경 수정 부분 */
@@ -134,7 +125,12 @@ section {
     margin-left: 4em;
     font-size: 2.7em;
   }
-
+  .coffee-container {
+    margin-left: 3em;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    width: 15em;
+  }
   .wakeup-kor {
     margin-top: -3.7em;
     margin-left: 6.5em;
