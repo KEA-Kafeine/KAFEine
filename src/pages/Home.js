@@ -9,10 +9,14 @@ const Home = forwardRef((props, ref) => {
       <div className="cv">
         <div className="content">
           <h1>You Can't Quit Me! </h1>
-          <p>당신에게 꼭 필요하게 될.<br/>가천 카카오<br/>엔터프라이즈 아카데미 <br/>2기 팀 카페인</p>
-          <a href="https://github.com/KEA-Kaffeine" className="cta">
-            github
-          </a>
+          <p>
+            당신에게 꼭 필요하게 될.
+            <br />
+            가천 카카오
+            <br />
+            엔터프라이즈 아카데미 <br />
+            2기 팀 카페인
+          </p>
         </div>
       </div>
       <script async src="index.js"></script>
