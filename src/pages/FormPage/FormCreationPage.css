@@ -1,0 +1,47 @@
+.form-creation-section {
+  background: #d9d9d9;
+  border-radius: 3em;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  transition: 0.3s;
+  width: 50em;
+  height: 34em;
+  margin-top: 2em;
+  text-align: center;
+  overflow: scroll;
+}
+
+.question-form {
+  text-align: center;
+}
+.question-input {
+  background: #f9fbff;
+  stroke: solid;
+  width: 30em;
+  height: 4em;
+  margin-left: 1em;
+}
+
+.question-button {
+  margin-left: 2em;
+  background-color: #45517a;
+  font-size: 1em;
+  color: white;
+  width: 3em;
+  height: 3em;
+  border-radius: 50px;
+}
+.question-box {
+  text-align: center;
+}
+.created-question {
+  background: #f9fbff;
+  border-radius: 1em;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  width: 34em;
+  height: 5em;
+  margin-top: 2em;
+  text-align: center;
+  margin-left: 6em;
+}

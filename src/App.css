@@ -29,9 +29,17 @@
 }
 
 .app-page {
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #000000, #000000); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #000000, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #304352; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #d7d2cc,
+    #304352
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #d7d2cc,
+    #304352
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   height: 100vh;
   background-attachment: fixed;
@@ -64,13 +72,144 @@
 }
 
 section {
-  background: #f5f5f5;
-  background-size: cover;
-  background-blend-mode: screen;
-  background-position: -100px;
-  padding: 2em;
+  background: #f0f0f0;
+  width: 50em;
+  height: cover;
+}
+/*h1 태그, content p 태그 삭제함 */
+/* 이도경 수정 부분 */
+/*Home 이미지, p 테그 수정 부분 */
+
+.coffee-container {
+  margin-left: 2em;
+  margin-top: 3em;
+  width: 20em;
 }
 
+.coffee {
+  opacity: 0.7;
+}
+
+.content .bottom-line {
+  margin-top: -1em;
+  margin-left: 4em;
+}
+
+/* 이도경 수정 부분 */
+/*비전 이미지, p 테그 수정 부분 */
+
+.cup {
+  opacity: 0.7;
+  margin-left: -4em;
+  width: 37em;
+}
+
+.wakeup {
+  margin-left: 4.5em;
+  font-size: 3.4em;
+}
+
+.wakeup-kor {
+  margin-top: -4em;
+  margin-left: 9em;
+}
+
+.wakeup-des {
+  margin-left: 13em;
+  font-size: 0.8em;
+}
+
+.cup2 {
+  margin-left: 13em;
+  margin-top: 4em;
+  width: 30em;
+  opacity: 0.7;
+}
+
+.text-anywhere {
+  font-size: 3em;
+}
+
+.vision-logo {
+  width: 20em;
+  margin-left: 12em;
+  margin-top: 6em;
+}
+
+.text-anywhere {
+  margin-left: 3.5em;
+  font-size: 3.4em;
+  margin-top: 2em;
+}
+
+.text-anywhere-des {
+  margin-top: -2em;
+  margin-left: 15em;
+  font-size: 0.8em;
+}
+
+/*핸드폰 화면용으로 설정 - 이도경 */
+@media screen and (max-width: 420px) {
+  .wakeup {
+    margin-left: 4em;
+    font-size: 2.7em;
+  }
+
+  .wakeup-kor {
+    margin-top: -3.7em;
+    margin-left: 6.5em;
+    font-size: 1em;
+  }
+
+  .wakeup-des {
+    margin-left: 9.2em;
+    margin-top: -1.2em;
+    font-size: 0.7em;
+    font-weight: 300;
+  }
+
+  .cup {
+    opacity: 0.7;
+    margin-left: -6em;
+    width: 30em;
+  }
+
+  .cup2 {
+    margin-left: 8em;
+    margin-top: 4em;
+    width: 23em;
+    opacity: 0.7;
+  }
+
+  .vision-logo {
+    width: 20em;
+    margin-left: 6em;
+    margin-top: 6em;
+  }
+
+  .text-anywhere {
+    margin-left: 2em;
+    font-size: 3em;
+    margin-top: 2em;
+  }
+
+  .text-anywhere-des {
+    margin-top: -2em;
+    margin-left: 9em;
+    font-weight: 300;
+    font-size: 0.7em;
+  }
+
+  .maintext {
+    font-size: 2em;
+    margin-left: 0.7em;
+  }
+  .text-need {
+    margin-left: 1.5em;
+  }
+}
+
+/*----- 아래부터는 수정한 부분 아님 - 이도경 - */
 .members-section {
   background: #221f26;
   width: 100%;
@@ -144,10 +283,11 @@ nav ul li a:hover {
 }
 
 .logo {
-  color: #ffd700;
-  font-weight: 800;
+  color: black;
+  font-weight: 200;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 4em;
   letter-spacing: -0.1em;
   text-align: center;
   width: 60%;
@@ -161,9 +301,11 @@ nav ul li a:hover {
 h1 {
   font-size: clamp(2.5rem, -0.875rem + 8.333vw, 4rem);
   font-weight: 800;
-  text-transform: uppercase;
-  color: white;
   line-height: 89%;
+}
+.text_quitus {
+  margin-top: -1em;
+  margin-left: 15em;
 }
 
 .cv {
@@ -191,6 +333,17 @@ h1 {
   /* display: inline-block; */
   /* border: 1px solid #4d4d4d; */
   padding: 0em 1.5em 0em 0em;
+}
+
+.cta {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 2.875em;
+  display: inline-block;
+  border: 1px solid #4d4d4d;
+  padding: 1.25em 1.25em 1.25em calc(2.5em + 1.5em);
   position: relative;
 }
 
@@ -289,13 +442,91 @@ h1 {
     height: 100%;
   }
 
+  .coffee-container {
+    width: 30em;
+    margin-left: 25em;
+  }
+
   @media only screen and (min-width: 700px) {
+    .text-need {
+      font-size: 2em;
+      margin-top: -0.3em;
+      margin-left: 0.3em;
+    }
     .left-col {
       display: flex;
     }
 
     .content p {
       width: 80%;
+    }
+    
+    /*홈페이지 수정 - 이도경 */
+    .coffee-container {
+      width: 26em;
+      margin-left: 26em;
+      margin-top: -8em;
+    }
+    .coffee {
+      opacity: 0.7;
+    }
+
+    .cup {
+      width: 50em;
+      margin-left: -10em;
+      opacity: 0.7;
+    }
+    .content .bottom-line {
+      margin-top: 1em;
+      margin-left: 5em;
+      margin-bottom: 3em;
+    }
+
+    /*비전 페이지 수정 - 이도경 */
+    .wakeup {
+      margin-left: 6em;
+      font-size: 5em;
+    }
+
+    .wakeup-kor {
+      margin-left: 21em;
+      margin-top: -5em;
+    }
+
+    .wakeup-des {
+      font-size: 1.03em;
+      font-weight: 400;
+
+      margin-left: 24em;
+    }
+
+    .cup2 {
+      margin-left: 16em;
+      margin-top: 4em;
+      width: 40em;
+      opacity: 0.7;
+    }
+
+    .text-anywhere {
+      font-size: 3em;
+    }
+
+    .vision-logo {
+      width: 34em;
+      margin-left: -2em;
+      margin-top: 3em;
+    }
+
+    .text-anywhere {
+      margin-top: 2em;
+      margin-left: 0em;
+      font-size: 4em;
+    }
+
+    .text-anywhere-des {
+      margin-left: 0em;
+      margin-top: -2em;
+      font-size: 1.1em;
     }
   }
 
