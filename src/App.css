@@ -7,7 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;800&display=swap");
 
 :root {
-  --primary-color: #2d7dff;
+  --primary-color: #ffcd4a;
 }
 
 .main-content {
@@ -21,9 +21,9 @@
 }
 
 .app-page {
-  background: #304352; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #d7d2cc, #304352); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #000000, #000000); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #000000, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   height: 100vh;
   background-attachment: fixed;
@@ -39,9 +39,11 @@
 .container {
   margin: 1em 0.5em;
   height: calc(100% - 2em);
+  /* border-radius: 13px; */
 }
 
 .lion {
+  /*사용 안함*/
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -54,7 +56,7 @@
 }
 
 section {
-  background: #221f26;
+  background: #f5f5f5;
   background-size: cover;
   background-blend-mode: screen;
   background-position: -100px;
@@ -74,6 +76,7 @@ section {
   margin-left: 2em;
 }
 
+/*네비 바 리스트들*/
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -82,38 +85,52 @@ nav ul {
 
 nav ul li {
   width: 100%;
+  padding: 0.2em;
 }
 nav ul li a {
   text-decoration: none;
-  color: white;
-  display: block;
-  padding: 0.875em 5em 0.875em 4em;
+  color: #1a2051;
+  font-weight: bold;
+  font-size: x-large;
+  display: inline-block;
+  margin: 0em 0em 0.3em 3em;
 }
 
+/*네비 바 항목 가리켰을 떄*/
 nav ul li a:hover {
-  background: #413e47;
+  font-size: xx-large;
+  color: #ffcd4a;
+  margin: -0.14em 0em 0em 2em;
 }
 
+/*네비 바 가리기 버튼*/
 .back-btn {
-  color: white;
-  margin: 2em;
+  color: #1a2051;
+  margin-left: 2em;
+  margin-top: 2em;
   cursor: pointer;
   transition: transform 0.3s;
 }
 
 .nav-menu.active {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  /* border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px; */
+  /* height: 90%; */
   left: 0;
   transition: 0.3ms;
 }
 
 .nav-menu {
   position: fixed;
-  z-index: 1;
-  background: #2c2931;
+  z-index: 10;
+  background: #ffffff;
   left: 0;
-  top: 0;
-  height: 100vh;
-  max-width: 300px;
+  top: 10;
+  height: 95vh;
+  min-width: 260px;
+  max-width: 290px;
   left: -100%;
   transition: 0.3s;
 }
@@ -125,13 +142,13 @@ nav ul li a:hover {
   font-size: 1.5rem;
   letter-spacing: -0.1em;
   text-align: center;
-  width: 100%;
-  margin: 0;
+  width: 60%;
+  margin: 1em;
 }
 
-header {
+/* header {
   display: flex;
-}
+} */
 
 h1 {
   font-size: clamp(2.5rem, -0.875rem + 8.333vw, 4rem);
@@ -156,31 +173,102 @@ h1 {
   margin-block: 0;
 }
 
-.cta {
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-top: 2.875em;
-  display: inline-block;
-  border: 1px solid #4d4d4d;
-  padding: 1.25em 1.25em 1.25em calc(2.5em + 1.5em);
+/*혜균: 네비게이션 하단 깃허브 로고*/
+.giturl {
+  width: 60%;
+  margin-top: 10em;
+  margin-left: 2em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+  /* display: inline-block; */
+  /* border: 1px solid #4d4d4d; */
+  padding: 0em 1.5em 0em 0em;
   position: relative;
 }
 
-.cta:before {
+.giturl:before {
+  width: 60%;
   color: white;
   content: "";
   position: absolute;
-  background: url("./contents/github.svg") no-repeat;
-  width: 5em;
-  height: 5em;
-  left: -0.2em;
-  top: -0em;
+  background: url("./contents/icon_github.svg") no-repeat;
+  width: 2em;
+  height: 2em;
+  /* left: 2em;
+  top: 2em; */
 }
 
-.cta:hover {
-  background: var(--primary-color);
+.giturl:hover {
+  width: 60%;
+  background: url("./contents/icon_github_hover.svg") no-repeat;
+  /* width: 2em;
+  height: 2em;
+  left: 2em;
+  top: 2em; */
+}
+
+/*혜균: 네비게이션 하단 노션 로고*/
+.notionurl {
+  width: 100;
+  margin-top: calc(200 / 400 * 100%);
+  margin-left: 2em;
+  margin-right: 1em;
+  margin-bottom: calc(200 / 400 * 100%);
+  /* display: inline-block; */
+  /* border: 1px solid #4d4d4d; */
+  padding: 0em 1.5em 0em 0em;
+  position: relative;
+}
+
+.notionurl:before {
+  /* width: 100; */
+  color: white;
+  content: "";
+  position: absolute;
+  background: url("./contents/icon_notion.svg") no-repeat;
+  width: 2em;
+  height: 2em;
+  /* left: 2em;
+  top: 2em; */
+}
+
+.notionurl:hover {
+  background: url("./contents/icon_notion_hover.svg") no-repeat;
+  /* width: 2em;
+  height: 2em;
+  left: 2em;
+  top: 2em; */
+}
+
+/*혜균: 네비게이션 하단 피그마 로고*/
+.figmaurl {
+  margin-top: 10em;
+  margin-left: 2em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+  /* display: inline-block; */
+  /* border: 1px solid #4d4d4d; */
+  padding: 0em 1.5em 0em 0em;
+  position: relative;
+}
+
+.figmaurl:before {
+  color: white;
+  content: "";
+  position: absolute;
+  background: url("./contents/icon_figma.svg") no-repeat;
+  width: 2em;
+  height: 2em;
+  /* left: 2em;
+  top: 2em; */
+}
+
+.figmaurl:hover {
+  background: url("./contents/icon_figma_hover.svg") no-repeat;
+  /* width: 2em;
+  height: 2em;
+  left: 2em;
+  top: 2em; */
 }
 
 @media only screen and (min-width: 1000px) {
@@ -217,7 +305,7 @@ h1 {
   }
   .container {
     display: flex;
-    padding: 2em;
+    padding: 0.5em;
   }
 
   .logo {
@@ -237,5 +325,19 @@ h1 {
   .content {
     justify-self: left;
     margin-left: 4em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-content {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
   }
 }

@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect, useMemo } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ReactComponent as Menu } from "./contents/menu.svg";
 import { useState, useRef } from "react";
@@ -10,9 +10,13 @@ import Members from "./pages/Members";
 import NoPage from "./pages/NoPage";
 import Contents from "./pages/Contents";
 
+import { useMediaQuery } from "react-responsive";
+
 function App() {
-  //깃허브 테스트
-  //깃허브 테스트2
+  const isTablet = useMediaQuery({
+    query: "(min-width:768px)",
+  });
+
   const [sidebar, setSidebar] = useState(true);
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -20,7 +24,6 @@ function App() {
   const visionRef = useRef(null);
   const contentsRef = useRef(null);
   const membersRef = useRef(null);
-  // const noPageRef = useRef(null);
 
   const gotoHome = () => {
     homeRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -55,11 +58,11 @@ function App() {
             <Contents ref={contentsRef} />
             <Members ref={membersRef} />
             <Routes>
-              <Route path="/" element={<Home/>}/>
-              <Route path="/vision" element={<Vision/>}/>
+              <Route path="/" element={<Home />} />
+              <Route path="/vision" element={<Vision />} />
               <Route path="/members" ref={membersRef} />
-              <Route path="/contents" element={<Contents/>}/>
-              <Route path="*" element={<NoPage/>}/>
+              <Route path="/contents" element={<Contents />} />
+              <Route path="*" element={<NoPage />} />
             </Routes>
             {/* <NoPage ref={noPageRef} /> */}
           </div>
