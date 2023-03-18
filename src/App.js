@@ -17,8 +17,20 @@ function App() {
     query: "(min-width:768px)",
   });
 
+  /* 네비바 사이즈 조정 시 자동으로 줄어듦 - 시작 */
   const [sidebar, setSidebar] = useState(true);
   const showSidebar = () => setSidebar(!sidebar);
+
+  const isOpen = useMemo(() => {
+    if (!isTablet) {
+      //
+      setSidebar(false);
+    } else {
+      setSidebar(true);
+    }
+  }, [isTablet]);
+
+  /* 네비바 사이즈 조정 시 자동으로 줄어듦 - 끝 */
 
   const homeRef = useRef(null);
   const visionRef = useRef(null);
