@@ -24,7 +24,7 @@ const teamKaffeine = [
   },
   {
     id: 2,
-    name: "지나",
+    name: "유지나",
     isPm: false,
     major: "AI",
     email: "gnnryu@gmail.com",
