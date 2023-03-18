@@ -63,16 +63,15 @@
 }
 
 section {
-  /* background: #f0f0f0;
+  background: #f0f0f0;
   width: 50em;
   height: cover;
-  padding-bottom: 4em; 도경님 ver*/
+  padding-bottom: 4em;
 
-  background: #f5f5f5;
-  background-size: cover;
+  /* background-size: cover;
   background-blend-mode: screen;
   background-position: -100px;
-  padding: 2em;
+  padding: 2em; */
 }
 
 .members-section {
