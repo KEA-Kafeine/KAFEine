@@ -6,6 +6,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;800&display=swap");
 
+@font-face {
+  font-family: 'yg-jalnan';
+  src: url('fonts/yg-jalnan.ttf') format('truetype');
+}
+
 :root {
   --primary-color: #ffcd4a;
 }
@@ -294,6 +299,7 @@ nav ul li a:hover {
   height: 96.05vh;
   min-width: 260px;
   max-width: 290px;
+  font-family: 'yg-jalnan';
   left: -100%;
   transition: 0.3s;
 }
@@ -319,6 +325,7 @@ h1 {
   text-transform: uppercase;
   color: black;
   line-height: 89%;
+  font-family: 'yg-jalnan';
 }
 
 .text_quitus {
@@ -339,7 +346,9 @@ h1 {
   color: #847d93;
   margin-top: 1.1em;
   margin-block: 0;
-} 검토 필요 */
+} 검토 필요
+  font-family: 'yg-jalnan';
+} */
 
 .cta {
   color: white;
