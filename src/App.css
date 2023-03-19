@@ -282,8 +282,8 @@ nav ul li a:hover {
 }
 
 .nav-menu.active {
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
   /* border-top-right-radius: 25px;
   border-bottom-right-radius: 25px; */
   /* height: 90%; */
