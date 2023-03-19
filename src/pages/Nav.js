@@ -44,9 +44,14 @@ function Nav(props) {
         </ul>
 
         <div>
-          <a href="https://github.com/KEA-Kafeine" className="giturl" />
-          <a href="https://beneficial-structure-ef5.notion.site/8c5a2339d7844b4495fb958c882da344" className="notionurl" />
-          <a href="https://www.figma.com/team_invite/redeem/oP4ZrfU1RCkDN3G4A5sQZ2" className="figmaurl" />
+          <a href="https://github.com/KEA-Kafeine" target="_blank" rel="noopener noreferrer" className="giturl" />
+          <a
+            href="https://beneficial-structure-ef5.notion.site/8c5a2339d7844b4495fb958c882da344"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="notionurl"
+          />
+          <a href="https://www.figma.com/team_invite/redeem/oP4ZrfU1RCkDN3G4A5sQZ2" target="_blank" rel="noopener noreferrer" className="figmaurl" />
         </div>
       </nav>
     </div>

@@ -14,7 +14,7 @@ import { useMediaQuery } from "react-responsive";
 
 function App() {
   const isTablet = useMediaQuery({
-    query: "(min-width:768px)",
+    query: "(min-width:874px)",
   });
 
   /* 네비바 사이즈 조정 시 자동으로 줄어듦 - 시작 */
