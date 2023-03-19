@@ -4,11 +4,10 @@
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   transition: 0.3s;
-  width: 50em;
+  width: 10em;
   height: 34em;
   margin-top: 2em;
   text-align: center;
-  overflow: scroll;
 }
 
 .question-form {
@@ -44,4 +43,202 @@
   margin-top: 2em;
   text-align: center;
   margin-left: 6em;
+}
+
+@media only screen and (min-width: 400px) {
+  .form-creation-section {
+    background: #d9d9d9;
+    border-radius: 3em;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+      rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    transition: 0.3s;
+    width: 23em;
+    height: 23em;
+    margin-left: 2em;
+    margin-top: 2em;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .question-form {
+    text-align: center;
+  }
+  .question-input {
+    background: #f9fbff;
+    stroke: solid;
+    width: 16em;
+    height: 2em;
+    margin-left: 1em;
+    font-size: 0.8em;
+  }
+
+  .question-button {
+    margin-left: 2em;
+    background-color: #45517a;
+    font-size: 1em;
+    color: white;
+    width: 3em;
+    height: 3em;
+    border-radius: 50px;
+  }
+  .question-box {
+    text-align: center;
+  }
+  .created-question {
+    background: #f9fbff;
+    border-radius: 1em;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+      rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    width: 26em;
+    height: 5em;
+    text-align: center;
+    margin-left: 4em;
+    font-size: 0.7em;
+  }
+
+  .createText {
+    font-size: 1em;
+    padding-top: 2em;
+  }
+
+  .type-selector {
+    margin-left: -16em;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .form-creation-section {
+    background: #d9d9d9;
+    border-radius: 2em;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+      rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    transition: 0.3s;
+    width: 30em;
+    height: 23em;
+    margin-left: 2.7em;
+    margin-top: 2em;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .question-form {
+    text-align: center;
+  }
+  .question-input {
+    background: #f9fbff;
+    stroke: solid;
+    width: 16em;
+    height: 2em;
+    margin-left: 1em;
+    font-size: 0.8em;
+  }
+
+  .question-button {
+    margin-left: 2em;
+    background-color: #45517a;
+    font-size: 1em;
+    color: white;
+    width: 3em;
+    height: 3em;
+    border-radius: 50px;
+  }
+  .question-box {
+    text-align: center;
+  }
+  .created-question {
+    background: #f9fbff;
+    border-radius: 1em;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+      rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    width: 26em;
+    height: 5em;
+    text-align: center;
+    margin-left: 9em;
+    font-size: 0.7em;
+  }
+
+  .createText {
+    font-size: 1.3em;
+    margin-left: 1em;
+  }
+
+  .type-selector {
+    margin-left: -16em;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .form-creation-section {
+    background: #d9d9d9;
+    border-radius: 3em;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+      rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    transition: 0.3s;
+    width: 43em;
+    height: 34em;
+    margin-top: 2em;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-left: 0em;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .question-form {
+    text-align: center;
+  }
+  .question-input {
+    background: #f9fbff;
+    stroke: solid;
+    width: 24em;
+    height: 3em;
+    border-radius: 2em;
+    margin-left: -3em;
+  }
+
+  .question-button {
+    margin-left: 2em;
+    background-color: #45517a;
+    font-size: 1em;
+    color: white;
+    width: 3em;
+    height: 3em;
+    border-radius: 50px;
+  }
+  .question-box {
+    text-align: center;
+  }
+  .created-question {
+    background: #f9fbff;
+    border-radius: 1em;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+      rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    width: 40em;
+    height: 5em;
+    margin-top: 2em;
+    margin-left: 7em;
+    font-size: 0.8em;
+  }
+  .type-selector {
+    margin-left: 8em;
+    margin-right: -3em;
+    margin-top: 1em;
+    height: 2em;
+    float: left;
+  }
+  .createText {
+    font-size: 2em;
+    margin-top: -1em;
+  }
 }
