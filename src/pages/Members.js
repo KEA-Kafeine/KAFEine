@@ -7,6 +7,7 @@ const teamKaffeine = [
   {
     id: 0,
     name: "정현진",
+    engName: "Hyeonjin Jeong",
     isPm: true,
     major: "Computer Engineering",
     email: "11ghyeonjin@gachon.ac.kr",
@@ -46,7 +47,7 @@ const teamKaffeine = [
     isPm: false,
     major: "Software",
     email: "hgyim00@gachon.ac.kr",
-    info: "어떠한 환경에서도 빠른 활용 능력으로 시너지를 일으키고 같이 일하고 싶은 엔지니어입니다.",
+    info: "어떠한 환경에서도 빠른 활용 능력으로 시너지를 일으키는, 같이 일하고 싶은 엔지니어입니다.",
     profileImgAd: "img/p5.png",
   },
   {
@@ -63,18 +64,18 @@ const teamKaffeine = [
 function MembersCards(props) {
   if (props.id % 2 === 0) {
     return (
-      <div className="ProfileCard">
+      <div className="ProfileCardA">
         <div className="IconImage ">
           <img src={props.profileImg} alt="" />
         </div>
         <div className="MemberName">
           {props.isPm ? (
             <h2>
-              {props.name} / {props.major} / PM
+              {props.name} 👑PM👑
             </h2>
           ) : (
             <h2>
-              {props.name} / {props.major}
+              {props.name}
             </h2>
           )}
           <p>{props.info}</p>
@@ -84,13 +85,13 @@ function MembersCards(props) {
     );
   }
   return (
-    <div className="ProfileCard">
+    <div className="ProfileCardB">
       <div className="IconImage ">
         <img src={props.profileImg} alt="" />
       </div>
       <div className="MemberName">
           <h2>
-            {props.name} / {props.major}
+            {props.name}
           </h2>
         <p>{props.info}</p>
         <p>{props.email}</p>
