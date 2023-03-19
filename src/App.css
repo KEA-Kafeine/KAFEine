@@ -220,6 +220,11 @@ section {
     font-size: 2em;
     margin-left: 0.7em;
   }
+  .maintextEx {
+    font-size: 1em;
+    margin-left: 0.7em;
+  }
+
   .text-need {
     margin-left: 1.5em;
   }
@@ -481,13 +486,13 @@ h1 {
   .coffee-container {
     width: 30em;
     margin-left: 25em;
+    z-index: -1;
   }
 
   @media only screen and (min-width: 700px) {
     .text-need {
       font-size: 2em;
-      margin-top: -0.3em;
-      margin-left: 0.3em;
+      z-index: 2;
     }
     .left-col {
       display: flex;
@@ -500,18 +505,31 @@ h1 {
     /*홈페이지 수정 - 이도경 */
 
     .maintext {
-      margin-top: -0.5em;
+      margin-top: 2em;
+      font-size: 5em;
+      z-index: 2;
     }
+    .maintextEx {
+      position: relative;
+      margin-top: 1em;
+      font-size: 3em;
+      font-weight: 400;
+      z-index: 2;
+    }
+
     .text-need {
+      position: relative;
       font-size: 1.6em;
     }
     .coffee-container {
+      position: relative;
       width: 26em;
       margin-left: 26em;
-      margin-top: -6em;
+      margin-top: -12em;
+      z-index: 1;
     }
     .coffee {
-      opacity: 0.7;
+      opacity: 0.4;
     }
 
     .cup {
