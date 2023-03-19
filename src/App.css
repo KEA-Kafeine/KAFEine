@@ -558,13 +558,13 @@ h1 {
     /*비전 페이지 수정 - 이도경 */
     .wakeup {
       color: #2b234a;
-      margin-left: 6em;
+      margin-left: 5.7em;
       font-size: 5em;
     }
 
     .wakeup-kor {
       color: #2b234a;
-      margin-left: 21em;
+      margin-left: 20em;
       margin-top: -5em;
     }
 
@@ -573,7 +573,7 @@ h1 {
       font-size: 1.03em;
       font-weight: 400;
 
-      margin-left: 24em;
+      margin-left: 23em;
     }
 
     .cup2 {
