@@ -8,11 +8,9 @@ const Home = forwardRef((props, ref) => {
           <h1 className="maintext">KAFEine,</h1>
           <h1 className="maintextEx">Brewing Everyday Moments</h1>
 
-          <p className="text-need">
-            일상생활에서 특별한 순간들을 만들어 내기 위해
-          </p>
+          <p className="text-need">일상생활에서 특별한 순간들을 만들어 내기 위해</p>
           <div className="coffee-container">
-            <img className="coffee" src={coffee} alt=''/>
+            <img className="coffee" src={coffee} alt="" />
           </div>
         </div>
       </div>
