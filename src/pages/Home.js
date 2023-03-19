@@ -4,15 +4,14 @@ const Home = forwardRef((props, ref) => {
   return (
     <section ref={ref}>
       <header>
-        <p className="logo">K A F E i n e</p>
+        <p className="logo">K A F E i n e ,</p>
       </header>
       <div className="cv">
         <div className="content">
           <h1 className="maintext">You Can't Quit Us!</h1>
 
           <p className="text-need">
-            당신에게 꼭 필요한, <br /> &nbsp; &nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;없어서는 안 될{" "}
+            당신에게 꼭 필요한, <br /> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;없어서는 안 될{" "}
           </p>
           <div className="coffee-container">
             <img className="coffee" src={coffee} />
