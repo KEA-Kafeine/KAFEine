@@ -1,7 +1,7 @@
 .ProfileCardA {
   border-radius: 3em;
   transition: 0.3s;
-  width: 100%;
+  width: 90%;
   height: 10em;
 }
 
@@ -43,7 +43,7 @@
 .ProfileCardB {
   border-radius: 3em;
   transition: 0.3s;
-  width: 100%;
+  width: 95%;
   height: 10em;
 }
 

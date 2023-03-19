@@ -17,6 +17,7 @@ const teamKaffeine = [
   {
     id: 1,
     name: "강현모",
+    engName: "HyunMo Kang",
     isPm: false,
     major: "Computer Engineering",
     email: "kangstar96@gmail.com",
@@ -26,6 +27,7 @@ const teamKaffeine = [
   {
     id: 2,
     name: "유지나",
+    engName: "Gina Ryu",
     isPm: false,
     major: "AI",
     email: "gnnryu@gmail.com",
@@ -35,6 +37,7 @@ const teamKaffeine = [
   {
     id: 3,
     name: "이도경",
+    engName: "Dokyung Lee",
     isPm: false,
     major: "Software",
     email: "cads225@gachon.ac.kr",
@@ -44,6 +47,7 @@ const teamKaffeine = [
   {
     id: 4,
     name: "임혜균",
+    engName: "Hyegyun Lim",
     isPm: false,
     major: "Software",
     email: "hgyim00@gachon.ac.kr",
@@ -53,6 +57,7 @@ const teamKaffeine = [
   {
     id: 5,
     name: "한하나",
+    engName: "Hana Han",
     isPm: false,
     major: "Computer Engineering",
     email: "han02hana06@gmail.com",
@@ -71,7 +76,7 @@ function MembersCards(props) {
         <div className="MemberName">
           {props.isPm ? (
             <h2>
-              {props.name} 👑PM👑
+              {props.name} / 👑PM👑
             </h2>
           ) : (
             <h2>
@@ -110,7 +115,7 @@ const Members = forwardRef((props, ref) => {
             <MembersCards
               key={member.id}
               id={member.id}
-              name={member.name}
+              name={member.engName}
               email={member.email}
               isPm={member.isPm}
               major={member.major}
