@@ -7,6 +7,7 @@ const teamKaffeine = [
   {
     id: 0,
     name: "정현진",
+    engName: "Hyeonjin Jeong",
     isPm: true,
     major: "Computer Engineering",
     email: "11ghyeonjin@gachon.ac.kr",
@@ -16,6 +17,7 @@ const teamKaffeine = [
   {
     id: 1,
     name: "강현모",
+    engName: "HyunMo Kang",
     isPm: false,
     major: "Computer Engineering",
     email: "kangstar96@gmail.com",
@@ -25,6 +27,7 @@ const teamKaffeine = [
   {
     id: 2,
     name: "유지나",
+    engName: "Gina Ryu",
     isPm: false,
     major: "AI",
     email: "gnnryu@gmail.com",
@@ -34,6 +37,7 @@ const teamKaffeine = [
   {
     id: 3,
     name: "이도경",
+    engName: "Dokyung Lee",
     isPm: false,
     major: "Software",
     email: "cads225@gachon.ac.kr",
@@ -43,15 +47,17 @@ const teamKaffeine = [
   {
     id: 4,
     name: "임혜균",
+    engName: "Hyegyun Lim",
     isPm: false,
     major: "Software",
     email: "hgyim00@gachon.ac.kr",
-    info: "어떠한 환경에서도 빠른 활용 능력으로 시너지를 일으키고 같이 일하고 싶은 엔지니어입니다.",
+    info: "어떠한 환경에서도 빠른 활용 능력으로 시너지를 일으키는, 같이 일하고 싶은 엔지니어입니다.",
     profileImgAd: "img/p5.png",
   },
   {
     id: 5,
     name: "한하나",
+    engName: "Hana Han",
     isPm: false,
     major: "Computer Engineering",
     email: "han02hana06@gmail.com",
@@ -63,18 +69,18 @@ const teamKaffeine = [
 function MembersCards(props) {
   if (props.id % 2 === 0) {
     return (
-      <div className="ProfileCard">
+      <div className="ProfileCardA">
         <div className="IconImage ">
           <img src={props.profileImg} alt="" />
         </div>
         <div className="MemberName">
           {props.isPm ? (
             <h2>
-              {props.name} / {props.major} / PM
+              {props.name} / 👑PM👑
             </h2>
           ) : (
             <h2>
-              {props.name} / {props.major}
+              {props.name}
             </h2>
           )}
           <p>{props.info}</p>
@@ -84,13 +90,13 @@ function MembersCards(props) {
     );
   }
   return (
-    <div className="ProfileCard">
+    <div className="ProfileCardB">
       <div className="IconImage ">
         <img src={props.profileImg} alt="" />
       </div>
       <div className="MemberName">
           <h2>
-            {props.name} / {props.major}
+            {props.name}
           </h2>
         <p>{props.info}</p>
         <p>{props.email}</p>
@@ -109,7 +115,7 @@ const Members = forwardRef((props, ref) => {
             <MembersCards
               key={member.id}
               id={member.id}
-              name={member.name}
+              name={member.engName}
               email={member.email}
               isPm={member.isPm}
               major={member.major}
