@@ -232,7 +232,7 @@ section {
 }
 
 .menu-btn {
-  color: aliceblue;
+  color: #221f26;
   cursor: pointer;
   position: absolute;
   margin-top: 2em;
@@ -243,6 +243,7 @@ section {
 nav ul {
   list-style-type: none;
   padding: 0;
+  margin-bottom: 5em;
   width: 100%;
 }
 
@@ -371,8 +372,9 @@ h1 {
 /*혜균: 네비게이션 하단 깃허브 로고*/
 .giturl {
   width: 60%;
+  background: url("./contents/icon_github.svg") no-repeat;
   margin-top: 10em;
-  margin-left: 2em;
+  margin-left: 3em;
   margin-right: 1em;
   margin-bottom: 2em;
   /* display: inline-block; */
@@ -386,7 +388,6 @@ h1 {
   color: white;
   content: "";
   position: absolute;
-  background: url("./contents/icon_github.svg") no-repeat;
   width: 2em;
   height: 2em;
   /* left: 2em;
@@ -405,6 +406,7 @@ h1 {
 /*혜균: 네비게이션 하단 노션 로고*/
 .notionurl {
   width: 100;
+  background: url("./contents/icon_notion.svg") no-repeat;
   margin-top: calc(200 / 400 * 100%);
   margin-left: 2em;
   margin-right: 1em;
@@ -420,7 +422,6 @@ h1 {
   color: white;
   content: "";
   position: absolute;
-  background: url("./contents/icon_notion.svg") no-repeat;
   width: 2em;
   height: 2em;
   /* left: 2em;
@@ -437,6 +438,7 @@ h1 {
 
 /*혜균: 네비게이션 하단 피그마 로고*/
 .figmaurl {
+  background: url("./contents/icon_figma.svg") no-repeat;
   margin-top: 10em;
   margin-left: 2em;
   margin-right: 1em;
@@ -451,7 +453,6 @@ h1 {
   color: white;
   content: "";
   position: absolute;
-  background: url("./contents/icon_figma.svg") no-repeat;
   width: 2em;
   height: 2em;
   /* left: 2em;
@@ -465,6 +466,7 @@ h1 {
   left: 2em;
   top: 2em; */
 }
+/*네비바 로고 - 끝*/
 
 @media only screen and (min-width: 1000px) {
   .nav-menu {
@@ -496,10 +498,17 @@ h1 {
     }
 
     /*홈페이지 수정 - 이도경 */
+
+    .maintext {
+      margin-top: -0.5em;
+    }
+    .text-need {
+      font-size: 1.6em;
+    }
     .coffee-container {
       width: 26em;
       margin-left: 26em;
-      margin-top: -8em;
+      margin-top: -6em;
     }
     .coffee {
       opacity: 0.7;

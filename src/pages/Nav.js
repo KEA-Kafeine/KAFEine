@@ -20,11 +20,6 @@ function Nav(props) {
           <img src={logo} className="logo" />
         </div>
 
-        <div>
-          <a href="https://github.com/KEA-Kafeine" className="giturl" />
-          <a href="https://beneficial-structure-ef5.notion.site/8c5a2339d7844b4495fb958c882da344" className="notionurl" />
-          <a href="https://www.figma.com/team_invite/redeem/oP4ZrfU1RCkDN3G4A5sQZ2" className="figmaurl" />
-        </div>
         <ul>
           <li>
             <Link to="/" className="active" onClick={props.gotoHome}>
@@ -47,6 +42,12 @@ function Nav(props) {
             </Link>
           </li>
         </ul>
+
+        <div>
+          <a href="https://github.com/KEA-Kafeine" className="giturl" />
+          <a href="https://beneficial-structure-ef5.notion.site/8c5a2339d7844b4495fb958c882da344" className="notionurl" />
+          <a href="https://www.figma.com/team_invite/redeem/oP4ZrfU1RCkDN3G4A5sQZ2" className="figmaurl" />
+        </div>
       </nav>
     </div>
   );
