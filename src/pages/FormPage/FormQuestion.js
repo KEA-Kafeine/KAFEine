@@ -4,11 +4,11 @@ import { Form } from "react-router-dom";
 function FormQuestion(props) {
   const [input, setInput] = useState("");
 
-  const inputRef = useRef(null);
+  // const inputRef = useRef(null);
 
-  useEffect(() => {
-    inputRef.current.focus();
-  });
+  // useEffect(() => {
+  //   inputRef.current.focus();
+  // });
   const handleChange = (e) => {
     setInput(e.target.value);
   };
@@ -33,7 +33,7 @@ function FormQuestion(props) {
         name="text"
         className="question-input"
         onChange={handleChange}
-        ref={inputRef}
+        // ref={inputRef}
       />
 
       <button className="question-button">+</button>

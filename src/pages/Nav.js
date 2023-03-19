@@ -17,7 +17,7 @@ function Nav(props) {
         <Arrow onClick={props.showSidebar} className="back-btn" />
 
         <div style={logoCss}>
-          <img src={logo} className="logo" />
+          <img src={logo} className="logo" alt=''/>
         </div>
 
         <ul>

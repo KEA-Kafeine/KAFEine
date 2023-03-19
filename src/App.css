@@ -30,8 +30,16 @@
 
 .app-page {
   background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #000000, #000000); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #000000, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(
+    to right,
+    #000000,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #000000,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   height: 100vh;
   background-attachment: fixed;
@@ -160,16 +168,16 @@ section {
 }
 
 /*핸드폰 화면용으로 설정 - 이도경 */
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 500px) {
   .wakeup {
     margin-left: 4em;
     font-size: 2.7em;
   }
   .coffee-container {
-    margin-left: 3em;
-    margin-top: 3em;
+    margin-left: 0em;
+    margin-top: 5em;
     margin-bottom: 5em;
-    width: 15em;
+    width: 20em;
   }
   .wakeup-kor {
     margin-top: -3.7em;
@@ -218,10 +226,18 @@ section {
 
   .maintext {
     font-size: 2em;
-    margin-left: 0.7em;
+    margin-left: 0em;
+    color: #2b234a;
   }
+  .maintextEx {
+    font-size: 1.3em;
+    margin-left: 0em;
+    color: #2b234a;
+  }
+
   .text-need {
-    margin-left: 1.5em;
+    margin-left: 0em;
+    color: #2b234a;
   }
 }
 
@@ -277,8 +293,8 @@ nav ul li a:hover {
 }
 
 .nav-menu.active {
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
   /* border-top-right-radius: 25px;
   border-bottom-right-radius: 25px; */
   /* height: 90%; */
@@ -318,7 +334,7 @@ h1 {
   font-size: clamp(2.5rem, -0.875rem + 8.333vw, 4rem);
   font-weight: 800;
   text-transform: uppercase;
-  color: black;
+  color: #2b234a;
   line-height: 89%;
 }
 
@@ -481,13 +497,13 @@ h1 {
   .coffee-container {
     width: 30em;
     margin-left: 25em;
+    z-index: -1;
   }
 
   @media only screen and (min-width: 700px) {
     .text-need {
       font-size: 2em;
-      margin-top: -0.3em;
-      margin-left: 0.3em;
+      z-index: 2;
     }
     .left-col {
       display: flex;
@@ -495,23 +511,37 @@ h1 {
 
     .content p {
       width: 80%;
+      color: #2b234a;
     }
 
     /*홈페이지 수정 - 이도경 */
 
     .maintext {
-      margin-top: -0.5em;
+      margin-top: 2em;
+      font-size: 5em;
+      z-index: 2;
     }
+    .maintextEx {
+      position: relative;
+      margin-top: 1em;
+      font-size: 3em;
+      font-weight: 400;
+      z-index: 2;
+    }
+
     .text-need {
+      position: relative;
       font-size: 1.6em;
     }
     .coffee-container {
+      position: relative;
       width: 26em;
       margin-left: 26em;
-      margin-top: -6em;
+      margin-top: -12em;
+      z-index: 1;
     }
     .coffee {
-      opacity: 0.7;
+      opacity: 0.4;
     }
 
     .cup {
@@ -527,16 +557,19 @@ h1 {
 
     /*비전 페이지 수정 - 이도경 */
     .wakeup {
+      color: #2b234a;
       margin-left: 6em;
       font-size: 5em;
     }
 
     .wakeup-kor {
+      color: #2b234a;
       margin-left: 21em;
       margin-top: -5em;
     }
 
     .wakeup-des {
+      color: #2b234a;
       font-size: 1.03em;
       font-weight: 400;
 
