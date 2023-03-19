@@ -2,7 +2,7 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NoPage from "./pages/NoPage";
-import Mainpage from "./pages/Mainpage";
+import Mainpage from "./pages/Mainpage.js";
 
 function App() {
   return (
