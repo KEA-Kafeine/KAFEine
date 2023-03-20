@@ -273,13 +273,14 @@
   }
 
   .question-button {
-    margin-left: 2em;
+    margin-left: -1.6em;
     background-color: #45517a;
     font-size: 1em;
     color: white;
-    width: 3em;
-    height: 3em;
-    border-radius: 50px;
+    margin-top: 1em;
+    width: 2.3em;
+    height: 2.4em;
+    border-radius: 40px;
   }
   .question-box {
     text-align: center;
@@ -294,6 +295,7 @@
     margin-top: 2em;
     margin-left: 7em;
     font-size: 0.8em;
+    overflow: scroll;
   }
   .type-selector {
     margin-left: 8em;
@@ -308,6 +310,11 @@
   }
 
   .question-type {
-    margin-left: -22em;
+    margin-left: -17em;
+  }
+
+  .selection-input {
+    width: 5em;
+    margin-left: 1em;
   }
 }
