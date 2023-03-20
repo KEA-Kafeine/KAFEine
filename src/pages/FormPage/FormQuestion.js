@@ -1,14 +1,30 @@
+import {
+  faEdit,
+  faPlusCircle,
+  faQuestion,
+  faTrash,
+  faTrashCan,
+} from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect, useRef } from "react";
 import { Form } from "react-router-dom";
 
 function FormQuestion(props) {
   const [input, setInput] = useState("");
+  const [input2, setInput2] = useState("");
   const [type, setType] = useState("");
+  const [selections, setSelections] = useState([""]);
   // const inputRef = useRef(null);
 
   // useEffect(() => {
   //   inputRef.current.focus();
   // });
+
+  const handleChange2 = (e) => {
+    setInput2(e.target.value);
+  };
+
   const handleChange = (e) => {
     setInput(e.target.value);
   };
@@ -18,13 +34,29 @@ function FormQuestion(props) {
     setType(e.target.value);
   };
 
+  function addSelections() {
+    console.log(input2);
+    if (!input2 || /^\s*$/.test(input2)) {
+      return;
+    }
+
+    const newSelections = [input2, ...selections];
+
+    setSelections(newSelections);
+    setInput2("");
+  }
+
+  function addOptions() {
+    return <p>{input2}</p>;
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
 
     props.onSubmit({
       id: Math.floor(Math.random() * 10000),
       text: input,
-      type: type, // generate random number
+      type: type,
+      selections: selections, // generate random number
     });
 
     setInput("");
@@ -51,6 +83,21 @@ function FormQuestion(props) {
         className="question-input"
         onChange={handleChange}
         // ref={inputRef}
+      />
+
+      <input
+        type="text"
+        placeholder="옵션"
+        value={input2}
+        name="text"
+        className="question-input"
+        onChange={handleChange2} // ref={inputRef}
+      />
+
+      <FontAwesomeIcon
+        icon={faPlusCircle}
+        onClick={addSelections}
+        className="edit-icon"
       />
 
       <button className="question-button">+</button>

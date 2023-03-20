@@ -8,6 +8,7 @@ import { toHaveDescription } from "@testing-library/jest-dom/dist/matchers";
 import React, { useState } from "react";
 import FormQuestion from "./FormQuestion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AddSelections from "./AddSelections";
 
 function FormManager({
   questions,
@@ -85,8 +86,8 @@ function FormManager({
           <div key={question.id} onClick={() => completeQuestion(question.id)}>
             {question.text}
           </div>
+          <div>{questions.selections}</div>
 
-          <CheckBox />
           <div className="icons">
             <FontAwesomeIcon
               icon={faTrashCan}
@@ -98,6 +99,7 @@ function FormManager({
               onClick={() => setEdit({ id: question.id, value: question.text })}
               className="edit-icon"
             />
+            <AddSelections selections={question.selections} />
           </div>
         </div>
       )}
