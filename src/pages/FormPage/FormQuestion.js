@@ -13,8 +13,8 @@ import { Form } from "react-router-dom";
 function FormQuestion(props) {
   const [input, setInput] = useState("");
   const [input2, setInput2] = useState("");
-  const [type, setType] = useState("");
-  const [selections, setSelections] = useState([""]);
+  const [type, setType] = useState("주관식");
+  const [selections, setSelections] = useState([]);
   // const inputRef = useRef(null);
 
   // useEffect(() => {
@@ -46,9 +46,6 @@ function FormQuestion(props) {
     setInput2("");
   }
 
-  function addOptions() {
-    return <p>{input2}</p>;
-  }
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -60,6 +57,7 @@ function FormQuestion(props) {
     });
 
     setInput("");
+    setSelections([]);
   };
 
   return (
@@ -85,21 +83,31 @@ function FormQuestion(props) {
         // ref={inputRef}
       />
 
-      <input
-        type="text"
-        placeholder="옵션"
-        value={input2}
-        name="text"
-        className="question-input"
-        onChange={handleChange2} // ref={inputRef}
-      />
+      {type == "객관식" && (
+        <div>
+          <input
+            type="text"
+            placeholder="옵션"
+            value={input2}
+            name="text"
+            className="selection-input"
+            onChange={handleChange2} // ref={inputRef}
+          />
+          <FontAwesomeIcon
+            icon={faPlusCircle}
+            onClick={addSelections}
+            className="edit-icon"
+          />
+        </div>
+      )}
 
-      <FontAwesomeIcon
-        icon={faPlusCircle}
-        onClick={addSelections}
-        className="edit-icon"
-      />
-
+      <div>
+        {selections.map((it) => (
+          <>
+            <input type="checkbox" value={it} /> <label> {it}</label>
+          </>
+        ))}
+      </div>
       <button className="question-button">+</button>
     </form>
   );
