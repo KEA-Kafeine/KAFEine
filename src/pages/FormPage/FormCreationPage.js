@@ -45,7 +45,7 @@ function FormCreationPage() {
   return (
     <section className="form-creation-section">
       <div>
-        <h2> Create Your Survey Form </h2>
+        <h2 className="createText"> Create Your Survey Form </h2>
         <FormQuestion onSubmit={addQuestion} />
         <FormManager
           questions={questions}
