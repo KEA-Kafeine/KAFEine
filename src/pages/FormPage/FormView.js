@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AddSelections from "./AddSelections";
+import AddYN from "./AddYN";
 
 function FormView(props) {
   const questions = props.questions;
@@ -29,12 +30,21 @@ function FormView(props) {
 
       {question.type == "객관식" && question.selections.length > 0 && (
         <div className="created-question" key={index}>
+          <div key={question.id}>{question.text}</div>
+          <div>{questions.selections}</div>
+
+          <AddSelections selections={question.selections} />
+        </div>
+      )}
+
+      {question.type == "찬부식" && question.selections.length > 0 && (
+        <div className="created-question" key={index}>
           <div key={question.id}>
             {question.text}
           </div>
           <div>{questions.selections}</div>
 
-          <AddSelections selections={question.selections} />
+          <AddYN selections={question.selections} />
         </div>
       )}
     </div>
