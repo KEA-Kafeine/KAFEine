@@ -45,6 +45,7 @@
   transition: 0.3s;
   width: 100%;
   height: 10em;
+  margin-right: 10em;
 }
 
 .ProfileCardB .MemberName{

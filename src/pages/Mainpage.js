@@ -1,13 +1,13 @@
 import "../App.css";
-import React from "react";
+import React, { useEffect, useState, useRef, useMemo } from "react";
 import { ReactComponent as Menu } from "../contents/menu.svg";
-import { useState, useRef, useMemo } from "react";
 import { useMediaQuery } from "react-responsive";
 import Nav from "./Nav";
 import Home from "./Home";
 import Vision from "./Vision";
 import Members from "./Members";
 import Contents from "./Contents";
+import { useNavigate } from "react-router-dom";
 
 function Mainpage() {
   const [sidebar, setSidebar] = useState(true);
@@ -16,6 +16,7 @@ function Mainpage() {
   const visionRef = useRef(null);
   const contentsRef = useRef(null);
   const membersRef = useRef(null);
+  const navigate = useNavigate();
 
   const isTablet = useMediaQuery({
     query: "(min-width:844px)",
@@ -50,10 +51,42 @@ function Mainpage() {
     membersRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const homeSectionTop = homeRef.current.offsetTop;
+      const visionSectionTop = visionRef.current.offsetTop;
+      const contentsSectionTop = contentsRef.current.offsetTop;
+      const membersSectionTop = membersRef.current.offsetTop;
+      const sections = [
+        { name: "home", top: homeSectionTop },
+        { name: "vision", top: visionSectionTop },
+        { name: "contents", top: contentsSectionTop },
+        { name: "members", top: membersSectionTop },
+      ];
+      const activeSection = sections.find((section) => {
+        const sectionTop = section.top - 80;
+        return currentScrollPos >= sectionTop;
+      });
+      if (activeSection) {
+        navigate(`#${activeSection.name}`);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [navigate]);
+
   return (
     <div className="app-page">
       <div className="container">
-        <Nav showSidebar={showSidebar} sidebar={sidebar} gotoHome={gotoHome} gotoVision={gotoVision} gotoContents={gotoContents} gotoMembers={gotoMembers} />
+        <Nav
+          showSidebar={showSidebar}
+          sidebar={sidebar}
+          gotoHome={gotoHome}
+          gotoVision={gotoVision}
+          gotoContents={gotoContents}
+          gotoMembers={gotoMembers}
+        />
         <Menu onClick={showSidebar} className="menu-btn" />
         <div className="main-content">
           <Home ref={homeRef} data={sidebar} />
@@ -65,4 +98,5 @@ function Mainpage() {
     </div>
   );
 }
+
 export default Mainpage;
