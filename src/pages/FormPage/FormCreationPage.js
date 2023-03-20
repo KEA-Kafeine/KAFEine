@@ -8,8 +8,8 @@ function FormCreationPage({questions, setQuestions}) {
     if (!question.text || /^\s*$/.test(question.text)) {
       return;
     }
-
-    const newQuestions = [question, ...questions];
+    
+    const newQuestions = [...questions, question];
 
     setQuestions(newQuestions);
   };
