@@ -16,7 +16,6 @@ function Mainpage() {
   const contentsRef = useRef(null);
   const membersRef = useRef(null);
 
-  const [currentPage, setCurrentPage] = useState(1);
   const [activeId, setActiveId] = useState("home");
 
   const isTablet = useMediaQuery({

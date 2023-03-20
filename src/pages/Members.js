@@ -47,11 +47,11 @@ const teamKaffeine = [
   {
     id: 4,
     name: "임혜균",
-    engName: "Hyegyun Lim",
+    engName: "Hyegyun Yim",
     isPm: false,
     major: "Software",
     email: "hgyim00@gachon.ac.kr",
-    info: "어떠한 환경에서도 빠른 활용 능력으로 시너지를 일으키는, 같이 일하고 싶은 엔지니어입니다.",
+    info: "어떠한 환경에서도 빠른 흡수와 활용 능력으로 시너지를 일으키는, 같이 일하고 싶은 엔지니어입니다.",
     profileImgAd: "img/p5.png",
   },
   {
