@@ -3,7 +3,7 @@ import { Form } from "react-router-dom";
 
 function FormQuestion(props) {
   const [input, setInput] = useState("");
-  const [type, setType] = useState("");
+  const [type, setType] = useState("주관식");
   // const inputRef = useRef(null);
 
   // useEffect(() => {
