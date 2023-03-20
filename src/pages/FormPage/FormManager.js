@@ -65,7 +65,7 @@ function FormManager({
             className="question-answer"
             // ref={inputRef}
           />
-          {/* <div className="icons">
+          <div className="icons">
             <FontAwesomeIcon
               icon={faTrashCan}
               onClick={() => removeQuestion(question.id)}
@@ -77,7 +77,6 @@ function FormManager({
               className="edit-icon"
             />
           </div>
-          <p> {question.type}</p> */}
         </div>
       )}
 
@@ -88,8 +87,8 @@ function FormManager({
           </div>
 
           <CheckBox />
-          {/* <div className="icons"> */}
-          {/* <FontAwesomeIcon
+          <div className="icons">
+            <FontAwesomeIcon
               icon={faTrashCan}
               onClick={() => removeQuestion(question.id)}
               className="delete-icon"
@@ -98,9 +97,8 @@ function FormManager({
               icon={faEdit}
               onClick={() => setEdit({ id: question.id, value: question.text })}
               className="edit-icon"
-            /> */}
-          {/* </div>
-          <p> {question.type}</p> */}
+            />
+          </div>
         </div>
       )}
     </div>
