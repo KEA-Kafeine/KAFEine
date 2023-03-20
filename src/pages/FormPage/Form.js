@@ -1,5 +1,5 @@
 // import styled from "styled-components";
-import React from "react";
+import React, { useState } from "react";
 import {
   faInfoCircle,
   faPencil,
@@ -9,9 +9,12 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Form.css";
 import FormCreationPage from "./FormCreationPage";
+import FormView from "./FormView";
 
 function Form() {
   const [checked, setChecked] = React.useState(true);
+  const [questions, setQuestions] = useState([]);
+  
   return (
     <div className="formsection">
       <input
@@ -42,9 +45,10 @@ function Form() {
       </nav>
       <div className="pages">
         <div class="content content-1">
-          <FormCreationPage />
+          <FormCreationPage questions={questions} setQuestions={setQuestions}/>
         </div>
-        <div class="content content-3">
+        <div className="content content-2">
+          <FormView questions={questions} setQuestions={setQuestions} />
         </div>
       </div>
     </div>
