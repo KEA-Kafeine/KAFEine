@@ -72,11 +72,11 @@ function FormManager({
               onClick={() => removeQuestion(question.id)}
               className="delete-icon"
             />
-            <FontAwesomeIcon
+            {/* <FontAwesomeIcon
               icon={faEdit}
               onClick={() => setEdit({ id: question.id, value: question.text })}
               className="edit-icon"
-            />
+            /> */}
           </div>
         </div>
       )}
@@ -94,11 +94,11 @@ function FormManager({
               onClick={() => removeQuestion(question.id)}
               className="delete-icon"
             />
-            <FontAwesomeIcon
+            {/* <FontAwesomeIcon
               icon={faEdit}
               onClick={() => setEdit({ id: question.id, value: question.text })}
               className="edit-icon"
-            />
+            /> */}
             <AddSelections selections={question.selections} />
           </div>
         </div>

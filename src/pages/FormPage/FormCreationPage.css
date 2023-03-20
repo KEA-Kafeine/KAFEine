@@ -295,6 +295,7 @@
     margin-top: 2em;
     margin-left: 7em;
     font-size: 0.8em;
+    overflow: scroll;
   }
   .type-selector {
     margin-left: 8em;
