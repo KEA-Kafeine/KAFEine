@@ -31,25 +31,78 @@ function FormManager({
   if (edit.id) {
     return <FormQuestion edit={edit} onSubmit={submitUpdate} />;
   }
+
+  function CheckBox({ valuekor, value }) {
+    return (
+      <div>
+        <input type="checkbox" value={value} /> <label> 예 </label>
+        <input type="checkbox" value={value} /> <label> 아니요 </label>
+      </div>
+    );
+  }
+
+  function onButtonClick() {
+    return (
+      <div>
+        {" "}
+        <CheckBox />{" "}
+      </div>
+    );
+  }
+
   return questions.map((question, index) => (
     <div className="question-box">
-      <div className="created-question" key={index}>
-        <div key={question.id} onClick={() => completeQuestion(question.id)}>
-          {question.text}
-        </div>
-        <div className="icons">
-          <FontAwesomeIcon
-            icon={faTrashCan}
-            onClick={() => removeQuestion(question.id)}
-            className="delete-icon"
+      {question.type == "주관식" && (
+        <div className="created-question" key={index}>
+          <div key={question.id} onClick={() => completeQuestion(question.id)}>
+            {question.text}
+          </div>
+
+          <input
+            type="text"
+            placeholder="여기에 응답하세요"
+            name="text"
+            className="question-answer"
+            // ref={inputRef}
           />
-          <FontAwesomeIcon
-            icon={faEdit}
-            onClick={() => setEdit({ id: question.id, value: question.text })}
-            className="edit-icon"
-          />
+          {/* <div className="icons">
+            <FontAwesomeIcon
+              icon={faTrashCan}
+              onClick={() => removeQuestion(question.id)}
+              className="delete-icon"
+            />
+            <FontAwesomeIcon
+              icon={faEdit}
+              onClick={() => setEdit({ id: question.id, value: question.text })}
+              className="edit-icon"
+            />
+          </div>
+          <p> {question.type}</p> */}
         </div>
-      </div>
+      )}
+
+      {question.type == "객관식" && (
+        <div className="created-question" key={index}>
+          <div key={question.id} onClick={() => completeQuestion(question.id)}>
+            {question.text}
+          </div>
+
+          <CheckBox />
+          {/* <div className="icons"> */}
+          {/* <FontAwesomeIcon
+              icon={faTrashCan}
+              onClick={() => removeQuestion(question.id)}
+              className="delete-icon"
+            />
+            <FontAwesomeIcon
+              icon={faEdit}
+              onClick={() => setEdit({ id: question.id, value: question.text })}
+              className="edit-icon"
+            /> */}
+          {/* </div>
+          <p> {question.type}</p> */}
+        </div>
+      )}
     </div>
   ));
 }
