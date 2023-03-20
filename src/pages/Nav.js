@@ -1,8 +1,8 @@
+import React, { useState, useRef, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { ReactComponent as Arrow } from "../contents/arrow-left.svg";
 
 import logo from "../contents/kafeine_logo.svg";
-// import Contents from "./Contents";
 
 const logoCss = {
   display: "flex",
@@ -17,27 +17,26 @@ function Nav(props) {
         <Arrow onClick={props.showSidebar} className="back-btn" />
 
         <div style={logoCss}>
-          <img src={logo} className="logo" alt=''/>
+          <img src={logo} className="logo" alt="" />
         </div>
-
         <ul>
           <li>
-            <Link to="/" className="active" onClick={props.gotoHome}>
+            <Link to="/" className={`${props.activeId === "home" ? "navClicked" : ""}`} onClick={props.gotoHome}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/vision" onClick={props.gotoVision}>
+            <Link to="/vision" className={`${props.activeId === "vision" ? "navClicked" : ""}`} onClick={props.gotoVision}>
               Vision
             </Link>
           </li>
           <li>
-            <Link to="/contents" onClick={props.gotoContents}>
+            <Link to="/contents" className={`${props.activeId === "contents" ? "navClicked" : ""}`} onClick={props.gotoContents}>
               Contents
             </Link>
           </li>
           <li>
-            <Link to="/members" onClick={props.gotoMembers}>
+            <Link to="/members" className={`${props.activeId === "members" ? "navClicked" : ""}`} onClick={props.gotoMembers}>
               About Us
             </Link>
           </li>
@@ -57,5 +56,4 @@ function Nav(props) {
     </div>
   );
 }
-
 export default Nav;

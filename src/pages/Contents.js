@@ -4,9 +4,9 @@ const Contents = forwardRef((props, ref) => {
   return (
     <section ref={ref}>
       <div className="cv">
-        <div className="content">
+        <div className="content" id="contents">
           <h1>Contents </h1>
-            <Form />
+          <Form />
         </div>
       </div>
       <script async src="index.js"></script>

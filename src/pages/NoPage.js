@@ -4,7 +4,7 @@ const NoPage = forwardRef((props, ref) => {
   return (
     <section ref={ref}>
       <div class="cv">
-        <div class="content">
+        <div class="content" id="nopage">
           <h1>404 Error </h1>
         </div>
       </div>

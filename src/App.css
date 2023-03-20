@@ -30,16 +30,8 @@
 
 .app-page {
   background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #000000,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #000000,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #000000, #000000); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #000000, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   height: 100vh;
   background-attachment: fixed;
@@ -275,9 +267,14 @@ nav ul li a {
   display: inline-block;
   margin: 0em 0em 0.3em 3em;
 }
-
 /*네비 바 항목 가리켰을 떄*/
 nav ul li a:hover {
+  font-size: xx-large;
+  color: #ffcd4a;
+  margin: -0.14em 0em 0em 2em;
+}
+/* 네비 바 현재 */
+.navClicked {
   font-size: xx-large;
   color: #ffcd4a;
   margin: -0.14em 0em 0em 2em;

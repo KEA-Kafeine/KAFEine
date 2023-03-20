@@ -74,15 +74,7 @@ function MembersCards(props) {
           <img src={props.profileImg} alt="" />
         </div>
         <div className="MemberName">
-          {props.isPm ? (
-            <h2>
-              {props.name} / 👑PM👑
-            </h2>
-          ) : (
-            <h2>
-              {props.name}
-            </h2>
-          )}
+          {props.isPm ? <h2>{props.name} / 👑PM👑</h2> : <h2>{props.name}</h2>}
           <p>{props.info}</p>
           <p>{props.email}</p>
         </div>
@@ -95,9 +87,7 @@ function MembersCards(props) {
         <img src={props.profileImg} alt="" />
       </div>
       <div className="MemberName">
-          <h2>
-            {props.name}
-          </h2>
+        <h2>{props.name}</h2>
         <p>{props.info}</p>
         <p>{props.email}</p>
       </div>
@@ -109,7 +99,7 @@ const Members = forwardRef((props, ref) => {
   return (
     <section ref={ref}>
       <div className="cv">
-        <div className="content">
+        <div className="content" id="members">
           <h1>About Us </h1>
           {teamKaffeine.map((member) => (
             <MembersCards
