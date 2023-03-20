@@ -8,6 +8,7 @@ import { toHaveDescription } from "@testing-library/jest-dom/dist/matchers";
 import React, { useState } from "react";
 import FormQuestion from "./FormQuestion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AddOptions from "./customOptions";
 
 function FormManager({
   questions,
@@ -81,6 +82,30 @@ function FormManager({
       )}
 
       {question.type == "객관식" && (
+        <div className="created-question" key={index}>
+          <div key={question.id} onClick={() => completeQuestion(question.id)}>
+            {question.text}
+          </div>
+
+          <AddOptions question={question}/>
+
+          <div className="icons">
+            <FontAwesomeIcon
+              icon={faTrashCan}
+              onClick={() => removeQuestion(question.id)}
+              className="delete-icon"
+            />
+            <FontAwesomeIcon
+              icon={faEdit}
+              onClick={() => setEdit({ id: question.id, value: question.text })}
+              className="edit-icon"
+            />
+          </div>
+
+        </div>
+      )}
+
+      {question.type == "찬부식" && (
         <div className="created-question" key={index}>
           <div key={question.id} onClick={() => completeQuestion(question.id)}>
             {question.text}

@@ -38,6 +38,9 @@ function FormQuestion(props) {
             {" "}
             주관식{" "}
           </option>
+          <option key="yesNo" value="찬부식">
+            찬부식{" "}
+          </option>
           <option key="select" value="객관식">
             객관식{" "}
           </option>
