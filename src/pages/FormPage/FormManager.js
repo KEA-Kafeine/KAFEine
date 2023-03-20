@@ -64,7 +64,6 @@ function FormManager({
             placeholder="여기에 응답하세요"
             name="text"
             className="question-answer"
-            // ref={inputRef}
           />
           <div className="icons">
             <FontAwesomeIcon

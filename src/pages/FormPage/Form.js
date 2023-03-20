@@ -15,7 +15,7 @@ import FormView from "./FormView";
 function Form() {
   const [checked, setChecked] = React.useState(true);
   const [questions, setQuestions] = useState([]);
-  
+
   return (
     <div className="formsection">
       <input
@@ -46,10 +46,15 @@ function Form() {
       </nav>
       <div className="pages">
         <div className="content content-1">
-          <FormCreationPage questions={questions} setQuestions={setQuestions}/>
+          <FormCreationPage questions={questions} setQuestions={setQuestions} />
         </div>
         <div className="content content-2">
-          <FormView questions={questions} setQuestions={setQuestions} />
+          <section className="form-creation-section">
+            <div>
+              <h2 className="createText"> Check Your Survey Form </h2>
+              <FormView questions={questions} setQuestions={setQuestions} />
+            </div>
+          </section>
         </div>
         <div class="content content-3"></div>
       </div>
