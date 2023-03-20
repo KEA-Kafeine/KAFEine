@@ -40,7 +40,7 @@ function FormQuestion(props) {
       return;
     }
 
-    const newSelections = [input2, ...selections];
+    const newSelections = [...selections, input2];
 
     setSelections(newSelections);
     setInput2("");
@@ -71,6 +71,9 @@ function FormQuestion(props) {
           <option key="select" value="객관식">
             객관식{" "}
           </option>
+          <option key="select" value="찬부식">
+            찬부식{" "}
+          </option>
         </select>
       </div>
       <input
@@ -91,6 +94,24 @@ function FormQuestion(props) {
             value={input2}
             name="text"
             className="selection-input"
+            onChange={handleChange2} // ref={inputRef}
+          />
+          <FontAwesomeIcon
+            icon={faPlusCircle}
+            onClick={addSelections}
+            className="edit-icon"
+          />
+        </div>
+      )}
+
+      {type == "찬부식" && (
+        <div>
+          <input
+            type="text"
+            placeholder="옵션"
+            value={input2}
+            name="text"
+            className="selection-one-input"
             onChange={handleChange2} // ref={inputRef}
           />
           <FontAwesomeIcon
