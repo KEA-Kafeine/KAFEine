@@ -9,6 +9,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Form.css";
 import FormCreationPage from "./FormCreationPage";
+import Form2 from "./Form2";
 import FormView from "./FormView";
 
 function Form() {
@@ -44,12 +45,13 @@ function Form() {
         <div class="slider"></div>
       </nav>
       <div className="pages">
-        <div class="content content-1">
+        <div className="content content-1">
           <FormCreationPage questions={questions} setQuestions={setQuestions}/>
         </div>
         <div className="content content-2">
           <FormView questions={questions} setQuestions={setQuestions} />
         </div>
+        <div class="content content-3"></div>
       </div>
     </div>
   );

@@ -72,6 +72,9 @@
   left: 75%;
 }
 
+#about:checked ~ div .content-4,
+#code:checked ~ div .content-3,
+#blog:checked ~ div .content-2,
 #home:checked ~ div .content-1 {
   display: block;
 }
