@@ -72,34 +72,30 @@ function FormManager({
               onClick={() => removeQuestion(question.id)}
               className="delete-icon"
             />
-            {/* <FontAwesomeIcon
-              icon={faEdit}
-              onClick={() => setEdit({ id: question.id, value: question.text })}
-              className="edit-icon"
-            /> */}
           </div>
         </div>
       )}
 
-      {question.type == "객관식" && (
+      {question.type == "객관식" && question.selections.length > 0 && (
         <div className="created-question" key={index}>
           <div key={question.id} onClick={() => completeQuestion(question.id)}>
             {question.text}
           </div>
           <div>{questions.selections}</div>
 
-          <div className="icons">
-            <FontAwesomeIcon
-              icon={faTrashCan}
-              onClick={() => removeQuestion(question.id)}
-              className="delete-icon"
-            />
-            {/* <FontAwesomeIcon
+          {/* <FontAwesomeIcon
               icon={faEdit}
               onClick={() => setEdit({ id: question.id, value: question.text })}
               className="edit-icon"
             /> */}
-            <AddSelections selections={question.selections} />
+          <AddSelections selections={question.selections} />
+
+          <div className="icons">
+            <FontAwesomeIcon
+              icon={faTrashCan}
+              onClick={() => removeQuestion(question.id)}
+              className="delete-icon2"
+            />
           </div>
         </div>
       )}

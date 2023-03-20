@@ -9,6 +9,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Form.css";
 import FormCreationPage from "./FormCreationPage";
+import Form2 from "./Form2";
 function Form() {
   const [checked, setChecked] = React.useState(true);
   return (
@@ -43,7 +44,15 @@ function Form() {
         <div class="content content-1">
           <FormCreationPage />
         </div>
-        <div class="content content-3"></div>
+        <div class="content content-2">
+          <Form2 />
+        </div>
+        <div class="content content-3">
+          <Form2 />
+        </div>
+        <div class="content content-4">
+          <FormCreationPage />
+        </div>
       </div>
     </div>
   );
