@@ -306,4 +306,8 @@
     font-size: 2em;
     margin-top: -1em;
   }
+
+  .question-type {
+    margin-left: -22em;
+  }
 }
