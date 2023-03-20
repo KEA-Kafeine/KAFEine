@@ -3,15 +3,13 @@ import FormQuestion from "./FormQuestion";
 import React, { useState } from "react";
 import FormManager from "./FormManager";
 
-function FormCreationPage() {
-  const [questions, setQuestions] = useState([]);
-
+function FormCreationPage({questions, setQuestions}) {
   const addQuestion = (question) => {
     if (!question.text || /^\s*$/.test(question.text)) {
       return;
     }
-
-    const newQuestions = [question, ...questions];
+    
+    const newQuestions = [...questions, question];
 
     setQuestions(newQuestions);
   };

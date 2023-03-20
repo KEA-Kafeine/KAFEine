@@ -8,6 +8,8 @@ import { toHaveDescription } from "@testing-library/jest-dom/dist/matchers";
 import React, { useState } from "react";
 import FormQuestion from "./FormQuestion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AddSelections from "./AddSelections";
+import AddYN from "./AddYN";
 
 function FormManager({
   questions,
@@ -63,7 +65,6 @@ function FormManager({
             placeholder="여기에 응답하세요"
             name="text"
             className="question-answer"
-            // ref={inputRef}
           />
           <div className="icons">
             <FontAwesomeIcon
@@ -71,36 +72,53 @@ function FormManager({
               onClick={() => removeQuestion(question.id)}
               className="delete-icon"
             />
-            <FontAwesomeIcon
-              icon={faEdit}
-              onClick={() => setEdit({ id: question.id, value: question.text })}
-              className="edit-icon"
-            />
           </div>
         </div>
       )}
 
-      {question.type == "객관식" && (
+      {question.type == "객관식" && question.selections.length > 0 && (
         <div className="created-question" key={index}>
           <div key={question.id} onClick={() => completeQuestion(question.id)}>
             {question.text}
           </div>
+          <div>{questions.selections}</div>
 
-          <CheckBox />
+          {/* <FontAwesomeIcon
+              icon={faEdit}
+              onClick={() => setEdit({ id: question.id, value: question.text })}
+              className="edit-icon"
+            /> */}
+          <AddSelections selections={question.selections} />
+
           <div className="icons">
             <FontAwesomeIcon
               icon={faTrashCan}
               onClick={() => removeQuestion(question.id)}
-              className="delete-icon"
-            />
-            <FontAwesomeIcon
-              icon={faEdit}
-              onClick={() => setEdit({ id: question.id, value: question.text })}
-              className="edit-icon"
+              className="delete-icon2"
             />
           </div>
         </div>
       )}
+
+      {question.type == "찬부식" && question.selections.length > 0 && (
+        <div className="created-question" key={index}>
+          <div key={question.id} onClick={() => completeQuestion(question.id)}>
+            {question.text}
+          </div>
+          <div>{questions.selections}</div>
+
+          <AddYN selections={question.selections} />
+
+          <div className="icons">
+            <FontAwesomeIcon
+              icon={faTrashCan}
+              onClick={() => removeQuestion(question.id)}
+              className="delete-icon2"
+            />
+          </div>
+        </div>
+      )}
+
     </div>
   ));
 }
